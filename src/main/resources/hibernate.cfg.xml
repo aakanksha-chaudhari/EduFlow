@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<hibernate-configuration>
+    <session-factory>
+
+
+		<!-- Database connection -->
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://localhost:5432/EduFlow
+		</property>
+
+		<property name="hibernate.connection.username">postgres</property>
+		<property name="hibernate.connection.password">postgres</property>
+
+		<!-- Hibernate properties -->
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.format_sql">true</property>
+
+		<!-- Entity mappings -->
+		<mapping class="model.Admin"/>
+		<mapping class="model.Student"/>
+		<mapping class="model.Teacher"/>
+		<mapping class="model.Attendance"/>
+		<mapping class="model.Announcements"/>
+		<mapping class="model.Course"/>
+
+
+	</session-factory>
+</hibernate-configuration>
